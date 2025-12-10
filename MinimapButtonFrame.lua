@@ -784,6 +784,7 @@ local plugins = {
 								button3 = "Cancel",
 								OnAccept = function()
 									DisableAddOn("MinimapButtonFrame")
+									DisableAddOn("MinimapButtonFrame_SkinPack")
 									ReloadUI()
 								end,
 								OnCancel = function()
