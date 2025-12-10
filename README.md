@@ -2,6 +2,8 @@
 
 # 🔘 Minimap Button Frame
 
+[![Documentation](https://img.shields.io/badge/📖_Docs-GitHub_Pages-2ea44f?style=for-the-badge)](https://xurkon.github.io/PA-MinimapButtonFrame/)
+
 <img src="https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white" alt="WoW 3.3.5a">
 <img src="https://img.shields.io/badge/Version-3.1.5-green?style=for-the-badge" alt="Version 3.1.5">
 <img src="https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge" alt="Project Ascension">
@@ -215,3 +217,5 @@ See `Readme.txt` for full version history from v0.9 to v2.4
 <sub>This addon is open source and provided as-is. Not affiliated with Blizzard Entertainment.</sub>
 
 </div>
+
+[Documentation](docs/index.html)
