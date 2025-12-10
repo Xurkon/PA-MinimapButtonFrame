@@ -114,6 +114,10 @@ MBF includes seamless ElvUI integration:
 <details open>
 <summary><b>v3.1.x</b> - Project Ascension Updates</summary>
 
+### v3.1.6
+
+- 🔧 SkinPack addon now auto-disabled when switching to ElvUI button control
+
 ### v3.1.5
 
 - 🔧 Fixed quest icon pins (pfQuest etc.) no longer collected into MBF
