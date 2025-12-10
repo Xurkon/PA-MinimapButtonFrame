@@ -221,6 +221,8 @@ History
 3.1.4	New    - MBF options now grey out when ElvUI's Button Grabber is in control
 	New    - Warning message displayed in MBF settings when ElvUI is controlling buttons
 	New    - ElvUI now shows popup to disable MBF when enabling Button Grabber
+3.1.7	New    - ElvUI's Button Grabber now auto-enabled when switching to ElvUI control
+	Change - Updated popup message to confirm auto-enable
 3.1.6	Change - MinimapButtonFrame_SkinPack addon now auto-disabled when switching to ElvUI button control
 3.1.5	Fixed  - Quest icon pins (from pfQuest and similar addons) no longer collected into MBF frame
 	New    - Added pfQuest minimap pin frames to icon exclusion list

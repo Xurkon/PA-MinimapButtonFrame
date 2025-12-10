@@ -114,6 +114,11 @@ MBF includes seamless ElvUI integration:
 <details open>
 <summary><b>v3.1.x</b> - Project Ascension Updates</summary>
 
+### v3.1.7
+
+- ✨ ElvUI's Button Grabber now auto-enabled when switching to ElvUI control
+- 🔄 Updated popup message to confirm auto-enable
+
 ### v3.1.6
 
 - 🔧 SkinPack addon now auto-disabled when switching to ElvUI button control

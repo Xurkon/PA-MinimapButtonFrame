@@ -774,11 +774,15 @@ local plugins = {
 					local E = unpack(ElvUI)
 					if E and E.db and E.db.general and E.db.general.minimap then
 						E.db.general.minimap.mbfControlEnabled = not value
-						-- If relinquishing to ElvUI (value = true), ask to disable addon
+						-- If relinquishing to ElvUI (value = true), auto-enable ElvUI's button grabber
 						if value then
+							-- Enable ElvUI's minimap button grabber so user doesn't have to do it manually
+							if E.db.general.minimap.buttonGrabber then
+								E.db.general.minimap.buttonGrabber.enable = true
+							end
 							StaticPopupDialogs["MBF_DISABLE_ADDON"] = {
 								text =
-								"MBF will now let ElvUI control minimap buttons.\n\nWould you like to disable MinimapButtonFrame addon and reload your UI?",
+								"MBF will now let ElvUI control minimap buttons.\n\nElvUI's Minimap Button Grabber has been auto-enabled.\n\nWould you like to disable MinimapButtonFrame addon and reload your UI?",
 								button1 = "Disable & Reload",
 								button2 = "Just Reload",
 								button3 = "Cancel",
