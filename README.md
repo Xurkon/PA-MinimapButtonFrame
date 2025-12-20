@@ -7,6 +7,7 @@
 <img src="https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white" alt="WoW 3.3.5a">
 <img src="https://img.shields.io/badge/Version-3.1.5-green?style=for-the-badge" alt="Version 3.1.5">
 <img src="https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge" alt="Project Ascension">
+![Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
 
 [![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
