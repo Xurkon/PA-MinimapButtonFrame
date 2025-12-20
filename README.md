@@ -5,7 +5,7 @@
 [![Documentation](https://img.shields.io/badge/📖_Docs-GitHub_Pages-2ea44f?style=for-the-badge)](https://xurkon.github.io/PA-MinimapButtonFrame/)
 
 ![WoW 3.3.5a](https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
-![Version 3.1.5](https://img.shields.io/badge/Version-3.1.5-green?style=for-the-badge)
+![Version 3.1.8](https://img.shields.io/badge/Version-3.1.8-green?style=for-the-badge)
 ![Project Ascension](https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge)
 ![Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
 

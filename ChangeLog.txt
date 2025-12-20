@@ -1,3 +1,6 @@
+v3.1.8
+- Updated README badges and standardized styles.
+- Integrated documentation and home page.
 
 - Added documentation folder and home page.
 
