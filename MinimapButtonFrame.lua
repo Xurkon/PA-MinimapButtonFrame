@@ -1406,6 +1406,14 @@ isMinimapIcon = function(frame)
 	local result = false;
 	local k, v;
 
+	-- Always exclude map pins - they are not minimap buttons
+	-- LootCollector pins and Zygor Guide Viewer markers (ZGVMarker)
+	if strfind(frameName, "lootcollectorminimappin") or
+	   strfind(frameName, "zgvmarker") then
+		return true;
+	end
+
+
 	for k, v in ipairs(MBF.db.profile.MinimapIcons) do
 		foundPos = strfind(frameName, strlower(v), 1);
 
@@ -1417,6 +1425,7 @@ isMinimapIcon = function(frame)
 	end
 	return result;
 end
+
 
 isValidAdd = function(frame, autoGather)
 	local result = true;
