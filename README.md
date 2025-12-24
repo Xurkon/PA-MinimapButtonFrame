@@ -7,7 +7,8 @@
 ![WoW 3.3.5a](https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
 ![Version 3.1.8](https://img.shields.io/badge/Version-3.1.8-green?style=for-the-badge)
 ![Project Ascension](https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge)
-![Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=DOWNLOADS&color=e67e22)
+![Total Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&color=e67e22)
+![Latest Release](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/latest/total?style=for-the-badge&label=LATEST%20RELEASE&color=3498db)
 
 [![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
@@ -29,7 +30,6 @@
 <td width="50%">
 
 ### 📦 Button Collection
-
 - Automatically gathers minimap buttons
 - Manual add/remove with `/mbf add` and `/mbf remove`
 - Alphabetical or custom sorting
@@ -39,7 +39,6 @@
 <td width="50%">
 
 ### 🎨 Customization
-
 - Movable and resizable frame
 - Customizable background color
 - Modular button skins
@@ -52,7 +51,6 @@
 <td width="50%">
 
 ### 🔌 Addon Integration
-
 - **ElvUI** - Seamless integration toggle
 - **LDB** - LibDataBroker support
 - Profile system for settings
@@ -62,7 +60,6 @@
 <td width="50%">
 
 ### 🌍 Localization
-
 - English, German, French
 - Spanish (ES/MX), Korean
 - Russian, Chinese (CN/TW)
@@ -84,7 +81,6 @@
 ## 🎮 Usage
 
 ### Slash Commands
-
 | Command | Description |
 |---------|-------------|
 | `/mbf` | Display command options |
@@ -96,7 +92,6 @@
 | `/mbf info` | Show info about object under cursor |
 
 ### Minimap Button
-
 | Action | Result |
 |--------|--------|
 | **Left-click** | Show/hide the frame |
@@ -106,7 +101,6 @@
 ---
 
 ## 🔧 ElvUI Integration
-
 MBF includes seamless ElvUI integration:
 
 - **MBF Controls Buttons**: Default mode - MBF manages all minimap buttons
@@ -116,44 +110,36 @@ MBF includes seamless ElvUI integration:
 ---
 
 ## 📜 Changelog
-
 <details open>
 <summary><b>v3.1.x</b> - Project Ascension Updates</summary>
 
 ### v3.1.7
-
 - ✨ ElvUI's Button Grabber now auto-enabled when switching to ElvUI control
 - 🔄 Updated popup message to confirm auto-enable
 
 ### v3.1.6
-
 - 🔧 SkinPack addon now auto-disabled when switching to ElvUI button control
 
 ### v3.1.5
-
 - 🔧 Fixed quest icon pins (pfQuest etc.) no longer collected into MBF
 - ➕ Added pfQuest minimap pin frames to icon exclusion list
 - 🔄 Improved detection of non-button minimap elements
 
 ### v3.1.4
-
 - ➕ MBF options grey out when ElvUI's Button Grabber is in control
 - ➕ Warning message in MBF settings when ElvUI controls buttons
 - ➕ ElvUI popup to disable MBF when enabling Button Grabber
 
 ### v3.1.3
-
 - ➕ Added "Plugins" submenu in MBF options for addon integrations
 - ➕ ElvUI Integration toggle: "Let ElvUI Control Buttons"
 - ➕ Popup when toggling to ElvUI offers to disable MBF addon
 
 ### v3.1.2
-
 - 🔧 Fixed ElvUI minimap panels no longer hide when MBF is hidden
 - 🔄 Added all 8 ElvUI MiniPanel frames to protection list
 
 ### v3.1.1
-
 - 🔧 Fixed ElvUI drag conflict - MBF drags independently
 - 🔧 Fixed anchor chain issues with MMHolder and ElvUI
 - ➕ New ElvUI integration toggle in Maps → Minimap → Buttons
@@ -165,14 +151,12 @@ MBF includes seamless ElvUI integration:
 <summary><b>v3.0.x - v3.1.0</b></summary>
 
 ### v3.1.0
-
 - 🔧 Fixed initial profile set to default
 - 🔧 Fixed MinimapButtonFrame.lua:1332 error
 - ➕ Added grow buttons up option
 - ➕ Added MBF anchor position selection
 
 ### v3.0.x
-
 - ✨ Redesigned config screens using Ace3
 - ➕ New title bar drag system
 - ➕ Profile support
@@ -190,7 +174,6 @@ See `Readme.txt` for full version history from v0.9 to v2.4
 ---
 
 ## ⚠️ Known Issues
-
 - **MetaMap**: Incompatible due to continual position resetting
 - **SexyMap**: Disable all minimap icon control for best results
 - **Enchantrix / onRaid**: Cannot grab buttons without names
@@ -198,7 +181,6 @@ See `Readme.txt` for full version history from v0.9 to v2.4
 ---
 
 ## 👥 Credits
-
 <table>
 <tr>
 <td align="center">
