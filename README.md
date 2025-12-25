@@ -113,6 +113,13 @@ MBF includes seamless ElvUI integration:
 <details open>
 <summary><b>v3.1.x</b> - Project Ascension Updates</summary>
 
+### v3.1.8
+
+- 🔧 Fixed ElvUI Button Grabber auto-enable now uses correct path
+- 🔄 Improved "Let ElvUI Control" popup - now requires disabling MBF to take effect
+- ✨ Cancel button properly reverts to MBF control
+- 🔧 All MBF options now correctly disabled when ElvUI controls buttons
+
 ### v3.1.7
 - ✨ ElvUI's Button Grabber now auto-enabled when switching to ElvUI control
 - 🔄 Updated popup message to confirm auto-enable

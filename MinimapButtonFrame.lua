@@ -79,9 +79,30 @@ local childList = {};
 local function IsMBFDisabledByElvUI()
 	if ElvUI then
 		local E = unpack(ElvUI)
-		if E and E.db and E.db.warcraftenhanced and E.db.warcraftenhanced.buttonGrabber then
-			-- ElvUI controls buttons when Button Grabber is enabled AND mbfControlEnabled is false
-			return E.db.warcraftenhanced.buttonGrabber.enable and not E.db.general.minimap.mbfControlEnabled
+		if E and E.db then
+			local mbfControlEnabled = E.db.general and E.db.general.minimap and E.db.general.minimap.mbfControlEnabled
+			
+			-- If mbfControlEnabled is explicitly true, MBF is in control
+			if mbfControlEnabled == true then
+				return false -- MBF is explicitly enabled to control buttons
+			end
+			
+			-- If mbfControlEnabled is explicitly false, user chose "Let ElvUI Control Buttons" in MBF
+			-- In this case, MBF should ALWAYS be disabled
+			if mbfControlEnabled == false then
+				return true -- User explicitly chose ElvUI control
+			end
+			
+			-- If mbfControlEnabled is nil (not set), check if ElvUI's Button Grabber is enabled
+			local buttonGrabberEnabled = false
+			
+			-- Check Enhanced private path (this is what the Enable checkbox actually uses)
+			if E.private and E.private.enhanced then
+				buttonGrabberEnabled = E.private.enhanced.minimapButtonGrabber
+			end
+			
+			-- MBF should be disabled only when ElvUI's Button Grabber is actually enabled
+			return buttonGrabberEnabled == true
 		end
 	end
 	return false
@@ -132,6 +153,7 @@ local display = {
 				end
 				MBFC_ColorLocked()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		altTitle = {
 			order = 3,
@@ -143,6 +165,7 @@ local display = {
 				MBF.db.profile.altTitle = not MBF.db.profile.altTitle
 				MBF:SwapTitleLocation()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space = {
 			order = 4,
@@ -167,6 +190,7 @@ local display = {
 				t.Alpha = a
 				MBFC_ColorLocked()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space1 = {
 			order = 11,
@@ -187,6 +211,7 @@ local display = {
 				MinimapButtonFrame:SetAlpha(MBF.db.profile.opacity)
 				MBFRestoreButtonFrame:SetAlpha(MBF.db.profile.opacity)
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space2 = {
 			order = 21,
@@ -206,6 +231,7 @@ local display = {
 				MBF.db.profile.columns_or_rows = v
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		mbfanchor = {
 			order = 31,
@@ -218,6 +244,7 @@ local display = {
 				MBF:SavePosition();
 			end,
 			values = frameanchor_options,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space3 = {
 			order = 32,
@@ -237,6 +264,7 @@ local display = {
 				MBF.db.profile.padding = v
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space4 = {
 			order = 41,
@@ -257,6 +285,7 @@ local display = {
 				MinimapButtonFrame:SetScale(MBF.db.profile.addonScale)
 				MBFRestoreButtonFrame:SetScale(MBF.db.profile.addonScale)
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		space5 = {
 			order = 51,
@@ -275,6 +304,7 @@ local display = {
 				MBF:Scan()
 			end,
 			values = tList,
+			disabled = IsMBFDisabledByElvUI,
 		},
 	},
 }
@@ -319,6 +349,7 @@ local gathering = {
 				MBF:Scan()
 			end,
 			disabled = function()
+				if IsMBFDisabledByElvUI() then return true end
 				if libdbicon then return false end
 				return true
 			end,
@@ -340,6 +371,7 @@ local gathering = {
 				MBF:Scan()
 			end,
 			disabled = function()
+				if IsMBFDisabledByElvUI() then return true end
 				if MBF.db.profile.minimapButton.hide then return true end
 				return false
 			end,
@@ -373,6 +405,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		spacer1 = {
 			order = 13,
@@ -397,6 +430,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		ShowNoMail = {
 			order = 15,
@@ -409,6 +443,7 @@ local gathering = {
 				MBF:Scan()
 			end,
 			disabled = function()
+				if IsMBFDisabledByElvUI() then return true end
 				if MBF.db.profile.MBFHideMiniMapMailFrame or (MBF.db.profile.grabBlizzButtons == false) then return true end
 				return false
 			end,
@@ -433,6 +468,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		spacer4 = {
 			order = 18,
@@ -454,6 +490,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		spacer5 = {
 			order = 20,
@@ -475,6 +512,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		spacer6 = {
 			order = 22,
@@ -498,6 +536,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 		spacer7 = {
 			order = 24,
@@ -519,6 +558,7 @@ local gathering = {
 				end
 				MBF:Scan()
 			end,
+			disabled = IsMBFDisabledByElvUI,
 		},
 	},
 }
@@ -772,30 +812,36 @@ local plugins = {
 			set = function(_, value)
 				if ElvUI then
 					local E = unpack(ElvUI)
-					if E and E.db and E.db.general and E.db.general.minimap then
+					if E and E.db then
+						-- Ensure table structure exists
+						E.db.general = E.db.general or {}
+						E.db.general.minimap = E.db.general.minimap or {}
 						E.db.general.minimap.mbfControlEnabled = not value
 						-- If relinquishing to ElvUI (value = true), auto-enable ElvUI's button grabber
 						if value then
 							-- Enable ElvUI's minimap button grabber so user doesn't have to do it manually
-							if E.db.general.minimap.buttonGrabber then
-								E.db.general.minimap.buttonGrabber.enable = true
-							end
+							-- The Enable checkbox uses E.private.enhanced.minimapButtonGrabber
+							E.private = E.private or {}
+							E.private.enhanced = E.private.enhanced or {}
+							E.private.enhanced.minimapButtonGrabber = true
 							StaticPopupDialogs["MBF_DISABLE_ADDON"] = {
 								text =
-								"MBF will now let ElvUI control minimap buttons.\n\nElvUI's Minimap Button Grabber has been auto-enabled.\n\nWould you like to disable MinimapButtonFrame addon and reload your UI?",
+								"ElvUI will now control minimap buttons.\n\nElvUI's Minimap Button Grabber has been auto-enabled.\n\nYou must disable MinimapButtonFrame and reload your UI for changes to take effect.",
 								button1 = "Disable & Reload",
-								button2 = "Just Reload",
-								button3 = "Cancel",
+								button2 = "Cancel",
 								OnAccept = function()
 									DisableAddOn("MinimapButtonFrame")
 									DisableAddOn("MinimapButtonFrame_SkinPack")
 									ReloadUI()
 								end,
 								OnCancel = function()
-									ReloadUI()
-								end,
-								OnAlt = function()
-									-- Cancel - do nothing, setting is already saved
+									-- Cancel - revert the setting since user didn't proceed
+									if ElvUI then
+										local E = unpack(ElvUI)
+										if E and E.db and E.db.general and E.db.general.minimap then
+											E.db.general.minimap.mbfControlEnabled = true -- Revert to MBF control
+										end
+									end
 								end,
 								timeout = 0,
 								whileDead = true,
