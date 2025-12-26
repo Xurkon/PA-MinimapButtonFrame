@@ -251,7 +251,7 @@
         <h1>🔘 MinimapButtonFrame</h1>
         <p class="subtitle">Collects minimap addon buttons and organizes them into a movable, customizable frame</p>
         <div class="badges">
-            <span class="badge badge-version">v3.1.9</span>
+            <span class="badge badge-version">v3.2.0</span>
             <span class="badge badge-wow">WoW 3.3.5a</span>
             <span class="badge badge-ascension">Project Ascension</span>
         </div>
@@ -323,6 +323,14 @@
         <section>
             <h2>📜 Recent Changes</h2>
             <div class="changelog">
+                <div class="changelog-item">
+                    <h3>v3.2.0 — Stack Overflow Fix</h3>
+                    <ul>
+                        <li>Fixed stack overflow with FarmHud addon</li>
+                        <li>Added recursion guard for GetChildren iteration</li>
+                        <li>Wrapped iteration in pcall for additional safety</li>
+                    </ul>
+                </div>
                 <div class="changelog-item">
                     <h3>v3.1.9 — ElvUI Integration Improvements</h3>
                     <ul>

@@ -34,6 +34,10 @@ local oldScale;
 local oldLevel;
 local oldStrata;
 
+-- Recursion guard to prevent stack overflow when iterating Minimap children
+-- (prevents MinimapButtonFrame and FarmHud from triggering each other)
+local isIteratingMinimapChildren = false
+
 
 local BlizzButtons = { "MiniMapTracking", "MiniMapVoiceChatFrame", "MiniMapWorldMapButton", "MiniMapLFGFrame",
 	"MinimapZoomIn", "MinimapZoomOut", "MiniMapMailFrame", "MiniMapBattlefieldFrame", "GameTimeFrame", "FeedbackUIButton" };
@@ -1694,16 +1698,25 @@ end
 -- Button Gathering Functions
 
 function findButtons(frame)
+	-- Prevent stack overflow from recursive calls (MinimapButtonFrame/FarmHud interaction)
+	if isIteratingMinimapChildren then return end
+	isIteratingMinimapChildren = true
+
 	local i, child
 
-	for i, child in ipairs({ frame:GetChildren() }) do
-		if (child:GetName() == "CECBMiniMapButtonFrame") then
-			child = CECBMiniMapButton;
+	-- Use pcall to prevent errors from propagating
+	pcall(function()
+		for i, child in ipairs({ frame:GetChildren() }) do
+			if (child:GetName() == "CECBMiniMapButtonFrame") then
+				child = CECBMiniMapButton;
+			end
+			if (isValidAdd(child, true)) then
+				addButton(child);
+			end
 		end
-		if (isValidAdd(child, true)) then
-			addButton(child);
-		end
-	end
+	end)
+
+	isIteratingMinimapChildren = false
 end
 
 function findIncluded()

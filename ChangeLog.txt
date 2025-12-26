@@ -1,3 +1,8 @@
+v3.2.0
+- Fixed stack overflow with FarmHud addon
+- Added recursion guard to prevent infinite loop when both MBF and FarmHud iterate over Minimap:GetChildren() simultaneously
+- Wrapped GetChildren iteration in pcall for additional safety
+
 v3.1.9
 - Added LootCollector minimap pin exclusion (LootCollectorMinimapPin)
 - Added Zygor Guide Viewer marker exclusion (ZGVMarker)

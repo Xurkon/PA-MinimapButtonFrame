@@ -5,7 +5,7 @@
 [![Documentation](https://img.shields.io/badge/📖_Docs-GitHub_Pages-2ea44f?style=for-the-badge)](https://xurkon.github.io/PA-MinimapButtonFrame/)
 
 ![WoW 3.3.5a](https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
-![Version 3.1.9](https://img.shields.io/badge/Version-3.1.9-green?style=for-the-badge)
+![Version 3.2.0](https://img.shields.io/badge/Version-3.2.0-green?style=for-the-badge)
 ![Project Ascension](https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge)
 ![Total Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&color=e67e22)
 ![Latest Release](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/latest/total?style=for-the-badge&label=LATEST%20RELEASE&color=3498db)
@@ -112,6 +112,12 @@ MBF includes seamless ElvUI integration:
 ## 📜 Changelog
 <details open>
 <summary><b>v3.1.x</b> - Project Ascension Updates</summary>
+
+### v3.2.0
+
+- 🔧 Fixed stack overflow with FarmHud addon
+- ➕ Added recursion guard to prevent infinite loop when iterating minimap children
+- 🛡️ Wrapped GetChildren iteration in pcall for additional safety
 
 ### v3.1.9
 
