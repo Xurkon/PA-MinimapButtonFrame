@@ -9,13 +9,13 @@
 ## Notes-ruRU: Собирает кнопки с мини-карты и помещает их в отдельное, передвижное окно.
 ## Notes-zhCN: 收集minimap按钮和使他们成为一个可移动的框架。
 ## Notes-zhTW: 收集minimap按鈕和使他們成為一個可移動的框架。
-## Author: Bachlott
+## Author: Xurkon
 ## Version: 3.2.0
 ## SavedVariables: MBFDB
 ## OptionalDeps: Ace3, LibDataBroker-1.1, LibAboutPanel
 ## X-Embeds: Ace3, LibDataBroker-1.1, LibAboutPanel
-## X-eMail: qflux@hotmail.com
-## X-Website: http://wow.curse.com/downloads/wow-addons/details/minimap-button-frame.aspx
+## X-eMail: Xurkon@gmail.com
+## X-Website: https://github.com/Xurkon/PA-MinimapButtonFrame
 ## X-Date: 2010-9-20
 ## X-Category: Interface Enhancements
 ## X-Localizations: enUS, deDE, frFR, esES, esMX, koKR, ruRU, zhCN, zhTW
