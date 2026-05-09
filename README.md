@@ -5,13 +5,13 @@
 [![Documentation](https://img.shields.io/badge/📖_Docs-GitHub_Pages-2ea44f?style=for-the-badge)](https://xurkon.github.io/PA-MinimapButtonFrame/)
 
 ![WoW 3.3.5a](https://img.shields.io/badge/WoW-3.3.5a-blue?style=for-the-badge&logo=battle.net&logoColor=white)
-![Version 3.2.0](https://img.shields.io/badge/Version-3.2.0-green?style=for-the-badge)
+![Version 3.2.1](https://img.shields.io/badge/Version-3.2.1-green?style=for-the-badge)
 ![Project Ascension](https://img.shields.io/badge/Project-Ascension-purple?style=for-the-badge)
 ![Total Downloads](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&color=e67e22)
 ![Latest Release](https://img.shields.io/github/downloads/Xurkon/PA-MinimapButtonFrame/latest/total?style=for-the-badge&label=LATEST%20RELEASE&color=3498db)
 
 [![Patreon](https://img.shields.io/badge/Patreon-Support-orange?style=for-the-badge&logo=patreon)](https://patreon.com/Xurkon)
-[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kancerous@gmail.com)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/Xurkon)
 
 **Collects minimap addon buttons and organizes them into a movable, customizable frame**
 
